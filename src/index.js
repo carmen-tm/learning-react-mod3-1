@@ -29,8 +29,16 @@ const items = [
 	}
 ];
 
+// With arrow functions
+const cheapItems = items.filter(item => item.price < 10);
+
+// Traditional function
+// const cheapItems = items.filter(function(item) {
+// 	return item.price < 10;
+// });
+
 ReactDOM.render(
-	<ItemList mySweetItems={items} />,
+	<ItemList mySweetItems={cheapItems} />,
 	document.getElementById('root')
 );
 
